@@ -1,0 +1,406 @@
+.navContainer {
+  width: 100%;
+  overflow: hidden;
+
+  .header {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 0;
+    color: white;
+    padding: 35px;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    box-sizing: border-box;
+    align-items: center;
+
+    &__mobilePathname {
+      display: none;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      display: flex;
+      cursor: pointer;
+
+      p {
+        margin: 0px;
+        transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+
+      .name {
+        text-transform: capitalize;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: 5px;
+        transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+        p {
+          position: relative;
+          transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+          &:nth-of-type(2) {
+            padding-left: 0.3em;
+          }
+
+          &:nth-of-type(3) {
+            position: absolute;
+            left: 125px;
+            padding-left: 0.3em;
+          }
+        }
+      }
+
+      &:hover {
+        .copyright {
+          transform: rotate(360deg);
+        }
+
+        .name {
+          padding-right: 20px;
+
+          .codeBy {
+            transform: translateX(-100%);
+          }
+
+          .firstName {
+            transform: translateX(-65px);
+          }
+
+          .lastName {
+            transform: translateX(-65px);
+          }
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+
+      .el {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        cursor: pointer;
+
+        &:hover {
+          .indicator {
+            transform: scale(1);
+          }
+        }
+
+        .indicator,
+        .indicatorActive {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          top: 60px;
+          left: 45%;
+          transform: translateX(-45%);
+          background-color: white;
+          border-radius: 50%;
+          transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .indicator {
+          transform: scale(0) translateX(-50%);
+        }
+
+        .indicatorActive {
+          transform: scale(1) translateX(-50%);
+        }
+      }
+
+      a {
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .headerButtonContainer {
+    transform: scale(0);
+    position: fixed;
+    right: 0px;
+    z-index: 65;
+
+    .button {
+      position: relative;
+      margin: 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #1c1d20;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .burger {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+
+      &::after,
+      &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 40%;
+        margin: auto;
+        background-color: white;
+        position: relative;
+        transition: transform 0.3s;
+      }
+
+      &::after {
+        top: -5px;
+      }
+
+      &::before {
+        top: 5px;
+      }
+    }
+
+    .burgerActive {
+      &::after {
+        transform: rotate(45deg);
+        top: -1px;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .navContainer {
+    width: 100%;
+    max-width: 1440px;
+    overflow: hidden;
+
+    .header {
+      width: 100%;
+
+      .logo {
+        font-size: 20px;
+
+        .name {
+          p {
+            &:nth-of-type(2) {
+              padding-left: 0.4em;
+            }
+
+            &:nth-of-type(3) {
+              position: absolute;
+              left: 110px;
+              padding-left: 0.4em;
+            }
+          }
+        }
+      }
+
+      .nav {
+        font-size: 20px;
+
+        .el {
+          .indicator {
+            top: 60px;
+          }
+        }
+      }
+    }
+
+    .headerButtonContainer {
+      .button {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navContainer {
+    width: 100%;
+    max-width: 1024px;
+    overflow: hidden;
+
+    .header {
+      width: 100%;
+
+      .logo {
+        font-size: 18px;
+
+        &:hover {
+          .copyright {
+            transform: none;
+          }
+
+          .name {
+            .firstName {
+              transform: none;
+            }
+
+            .lastName {
+              transform: none;
+            }
+          }
+        }
+
+        .name {
+          width: 100%;
+          margin-left: 0px;
+
+          .codeBy {
+            display: none;
+          }
+
+          p {
+            &:nth-of-type(2) {
+              padding-left: 0.2em;
+            }
+            &:nth-of-type(3) {
+              position: relative;
+              left: 2px;
+              padding-right: 0.2em;
+              padding-left: 0.2em;
+            }
+          }
+        }
+      }
+
+      .nav {
+        font-size: 18px;
+
+        .el {
+          .indicator {
+            width:6px;
+            height: 6px;
+            top: 55px;
+          }
+        }
+      }
+    }
+
+    .headerButtonContainer {
+      .button {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navContainer {
+    width: 100%;
+    max-width: 768px;
+    overflow: hidden;
+
+    .header {
+      width: 100%;
+
+      .logo {
+        font-size: 16px;
+
+        .name {
+          p {
+            &:nth-of-type(3) {
+              position: relative;
+              left: 3px;
+              padding-left: 0.3em;
+            }
+          }
+        }
+      }
+
+      .nav {
+        font-size: 16px;
+
+        .el {
+          .indicator {
+            width:6px;
+            height: 6px;
+            top: 50px;
+          }
+        }
+      }
+    }
+
+    .headerButtonContainer {
+      .button {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navContainer {
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+
+    .header {
+      width: 100%;
+      display: flex;
+
+      &__mobilePathname {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        cursor: pointer;
+        font-size: 16px;
+
+        .indicator {
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          top: 45px;
+          left: 50%;
+          background-color: white;
+          border-radius: 50%;
+          transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+          transform: scale(1) translateX(-50%);
+        }
+
+        p {
+          color: #fff;
+          text-transform: capitalize;
+        }
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav {
+        display: none;
+      }
+    }
+
+    .headerButtonContainer {
+      .button {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

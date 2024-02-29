@@ -1,0 +1,7 @@
+export const homeArr = ['Welcome', 'To', 'Minh', 'Phuong', 'Personal', 'Site']
+export const aboutArr = ['Welcome', 'To', 'About', 'Page']
+export const contactArr = ['Welcome', 'To', 'About', 'Page']
+export const projectArr = ['Welcome', 'To', 'Project', 'Page']
+export const resumeArr = ['Welcome', 'To', 'Resume', 'Page']
+export const workArr = ['Welcome', 'To', 'Work', 'Page']
+export const testArr = ['Welcome', 'To', 'Test', 'Page']

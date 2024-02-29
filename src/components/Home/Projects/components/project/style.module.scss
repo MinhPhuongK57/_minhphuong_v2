@@ -1,0 +1,86 @@
+.projectLink {
+  display: inline-block;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 50px 100px 50px 100px;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  h2 {
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 400;
+    transition: all 0.4s;
+  }
+
+  p {
+    transition: all 0.4s;
+    font-weight: 300;
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid rgb(201, 201, 201);
+  }
+
+  &:hover {
+    opacity: 0.5;
+
+    h2 {
+      transform: translateX(-10px);
+    }
+
+    p {
+      transform: translateX(10px);
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .project {
+    padding: 30px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .project {
+    padding: 30px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .project {
+    padding: 10px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

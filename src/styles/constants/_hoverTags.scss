@@ -1,0 +1,44 @@
+.hover {
+  &__tags {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 var(--spacing, 0px);
+    transition: margin .25s;
+
+    svg {
+      display: none;
+      width: 80px;
+      height: 40px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 7px) translateZ(0);
+      fill: none;
+      stroke: var(--stroke, var(--line));
+      stroke-linecap: round;
+      stroke-width: 1px;
+      stroke-dasharray: var(--offset, 69px) 278px;
+      stroke-dashoffset: 380px;
+      transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+    }
+
+    &:hover {
+      --spacing: 1px;
+      --stroke: var(--line-active);
+      --stroke-delay: .1s;
+      --offset: 180px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hover {
+    &__tags {
+      svg {
+        display: block;
+      }
+    }
+  }
+}

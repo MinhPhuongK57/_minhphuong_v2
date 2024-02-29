@@ -1,0 +1,27 @@
+/* styles/grid-overlay.scss */
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 80px repeat(22, 1fr) 80px;
+  z-index: 999999;
+}
+
+.grid-column {
+  border: 0.2px solid rgb(255, 78, 78);
+  border-top: none;
+  border-bottom: none;
+  z-index: 999999;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}

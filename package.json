@@ -1,0 +1,38 @@
+{
+  "name": "minhphuongk57",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5701",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@react-three/cannon": "^6.6.0",
+    "@react-three/drei": "^9.92.1",
+    "@react-three/fiber": "^8.15.12",
+    "@studio-freight/lenis": "^1.0.27",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.10",
+    "eslint-plugin-react-hooks": "^5.0.0-canary-0cdfef19b-20231211",
+    "framer-motion": "^11.0.6",
+    "framer-motion-3d": "^10.16.16",
+    "gsap": "^3.12.3",
+    "locomotive-scroll": "^5.0.0-beta.8",
+    "next": "^13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.64.0",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "@types/react": "18.2.33",
+    "@types/three": "^0.159.0",
+    "typescript": "^5.2.2"
+  }
+}

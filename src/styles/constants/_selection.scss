@@ -1,0 +1,14 @@
+::selection {
+  color: var(--color-selection);
+  background-color: transparent;
+}
+
+::-webkit-selection {
+  color: var(--color-selection);
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: var(--color-selection);
+  background-color: transparent;
+}

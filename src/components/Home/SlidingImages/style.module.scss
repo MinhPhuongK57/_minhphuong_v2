@@ -1,0 +1,87 @@
+.slidingImages {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2vw;
+  position: relative;
+  margin-top: 200px;
+  background-color: white;
+  z-index: 1;
+
+  .slider {
+    display: flex;
+    position: relative;
+    gap: 3.2vw;
+    width: 120vw;
+    left: -10vw;
+
+    .project {
+      width: 25%;
+      height: 20vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .imageContainer {
+        position: relative;
+        width: 85%;
+        height: 85%;
+
+        img {
+          border-radius: 5px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .circleContainer {
+    background-color: red;
+    position: relative;
+    margin-top: 100px;
+
+    .circle {
+      height: 1550%;
+      width: 120%;
+      left: -10%;
+      border-radius: 0 0 50% 50%;
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+      box-shadow: 0px 60px 50px rgba(225, 225, 225, 0.748);
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .slidingImages {
+    margin-top: 140px;
+  }
+  .circleContainer {
+    position: relative;
+    .circle {
+      height: 200%;
+      position: absolute;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slidingImages {
+    margin-top: 100px;
+  }
+  .circleContainer {
+    position: relative;
+    .circle {
+      height: 150%;
+      position: absolute;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .slidingImages {
+    margin-top: 80px;
+  }
+
+  .circleContainer {
+    position: relative; 
+  }
+}

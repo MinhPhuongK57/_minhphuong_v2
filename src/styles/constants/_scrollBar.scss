@@ -1,0 +1,37 @@
+// /*-----Scroll-----*/
+:root {
+  --thumb-color: var(--black-active);
+  --linear-thumb-gradient: var(--black-webkit-linear);
+  --linear-thumb-webkit-gradient: var(--black-linear);
+}
+  
+::-webkit-scrollbar {
+  max-width: 5px;
+  cursor: pointer !important;
+  background: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  background: var(--linear-thumb-webkit-gradient);
+  background: var(--linear-thumb-gradient);
+  border-radius: 4px;
+  cursor: pointer !important;
+
+  &:hover {
+    cursor: pointer;
+    background: var(--thumb-color);
+    background: var(--linear-thumb-webkit-gradient);
+    background: var(--linear-thumb-gradient);
+    cursor: pointer !important;
+  }
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  cursor: pointer !important;
+}
+
+// /*-----End Scroll-----*/

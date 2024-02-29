@@ -1,0 +1,137 @@
+.landing {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sliderContainer {
+    position: absolute;
+    top: calc(100vh - 350px);
+  }
+
+  .slider {
+    position: relative;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+
+    p {
+      position: relative;
+      margin: 0px;
+      color: white;
+      font-size: 200px;
+      font-weight: 500;
+
+      &:nth-of-type(2) {
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+
+  .description {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+
+    p {
+      margin: 0px;
+      margin-bottom: 20px;
+    }
+
+    svg {
+      transform: scale(2.2);
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .landing {
+    width: 100%;
+    max-width: 1440px;
+    overflow: hidden;
+    height: 100vh;
+
+    .sliderContainer {
+      .slider {
+        p {
+          font-size: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .landing {
+    width: 100%;
+    max-width: 1024px;
+    overflow: hidden;
+    height: 100vh;
+
+    .sliderContainer {
+      position: absolute;
+      top: calc(100vh - 220px);
+
+      .slider {
+        p {
+          font-size: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .landing {
+    width: 100%;
+    max-width: 768px;
+    overflow: hidden;
+    height: 100vh;
+
+    .sliderContainer {
+      display: none;
+    }
+
+    .description {
+      position: absolute;
+      top: 50%;
+      left: 15%;
+      font-size: 32px;
+
+      p {
+        margin: 0px;
+        margin-bottom: 20px;
+      }
+
+      svg {
+        transform: scale(3);
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landing {
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    height: 100vh;
+
+    .sliderContainer {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/Autonomous/Documents/Per/_minhphuong_v2/src/app/layout\":[\"static/media/ae4d5ec4250233e9-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

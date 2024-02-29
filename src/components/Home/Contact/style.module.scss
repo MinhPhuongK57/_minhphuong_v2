@@ -1,0 +1,343 @@
+.contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #141516;
+  position: relative;
+  .body {
+    padding-top: 200px;
+    width: 100%;
+    max-width: 1800px;
+    background-color: #141516;
+
+    .title {
+      border-bottom: 1px solid rgb(134, 134, 134);
+      padding-bottom: 100px;
+      margin-left: 200px;
+      margin-right: 200px;
+      position: relative;
+
+      span {
+        display: flex;
+        align-items: center;
+        .imageContainer {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+          }
+        }
+        h2 {
+          margin-left: 0.3em;
+        }
+      }
+      h2 {
+        font-size: 5vw;
+        margin: 0px;
+        font-weight: 300;
+      }
+      .buttonContainer {
+        position: absolute;
+        left: calc(100% - 400px);
+        top: calc(100% - 75px);
+      }
+      .button {
+        width: 180px;
+        height: 180px;
+        background-color: #3f9f9f;
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        p {
+          margin: 0px;
+          font-size: 16px;
+          font-weight: 300;
+          z-index: 2;
+          position: relative;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 30%;
+        left: 100%;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .nav {
+      display: flex;
+      gap: 40px;
+      margin-top: 100px;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 200px;
+      padding: 20px;
+
+      div {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+
+        p,
+        h3 {
+          text-transform: uppercase;
+          margin: 0px;
+          padding: 3px;
+          cursor: pointer;
+        }
+
+        p {
+          &::after {
+            content: '';
+            width: 0%;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+        span {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        h3 {
+          color: rgb(165, 163, 163);
+          cursor: default;
+          font-weight: 300;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .contact {
+    .body {
+      padding-top: 250px;
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+      nav {
+        gap: 40px;
+      }
+      .info {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact {
+    .body {
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+      .title {
+        border-bottom: 1px solid rgb(134, 134, 134);
+        padding-bottom: 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+        .buttonContainer {
+          position: absolute;
+          left: calc(100% - 280px);
+          top: calc(100% - 55px);
+        }
+        .button {
+          width: 120px;
+          height: 120px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 40px;
+        margin-top: 100px;
+        margin-left: 120px;
+        margin-right: 120px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    .body {
+      svg {
+        width: 6px;
+        height: 6px;
+      }
+
+      .title {
+        border-bottom: 1px solid rgb(134, 134, 134);
+        padding-bottom: 80px;
+        margin-left: 80px;
+        margin-right: 80px;
+
+        .buttonContainer {
+          position: absolute;
+          left: calc(100% - 280px);
+          top: calc(100% - 55px);
+        }
+
+        .button {
+          width: 120px;
+          height: 120px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        span > h2 {
+          display: block;
+          position: relative;
+          margin-left: 30px;
+
+          &::after {
+            position: absolute;
+            content: '\A0together';
+            font-size: 5vw;
+            margin: 0px;
+            font-weight: 300;
+          }
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        margin-top: 150px;
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+
+      .info {
+        flex-direction: column-reverse;
+        margin-top: 120px;
+        margin-bottom: 40px;
+
+        div:nth-child(1) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact {
+    .body {
+      svg {
+        width: 4px;
+        height: 4px;
+      }
+
+      .title {
+        border-bottom: 1px solid rgb(134, 134, 134);
+        padding-bottom: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        .buttonContainer {
+          position: absolute;
+          left: calc(100% - 280px);
+          top: calc(100% - 55px);
+        }
+        .button {
+          width: 100px;
+          height: 100px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        span > h2 {
+          display: block;
+          position: relative;
+          margin-left: 20px;
+
+          &::after {
+            position: absolute;
+            content: '\A0together';
+            font-size: 5vw;
+            margin: 0px;
+            font-weight: 300;
+          }
+        }
+
+        h2 {
+          display: none;
+        }
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .info {
+        flex-direction: column-reverse;
+        padding: 20px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+        div:nth-child(1) {
+          margin-top: 40px;
+        }
+
+        div {
+          span {
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+}

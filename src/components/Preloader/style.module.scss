@@ -1,0 +1,57 @@
+.introduction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #1c1c1c;
+  background-image: linear-gradient(43deg, #1c1c1c 0%, #1c1c1c 46%, #1c1c1c 100%);
+  text-transform: capitalize;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+
+    path {
+      fill: #1c1c1c;
+    }
+  }
+
+  p {
+    display: flex;
+    color: white;
+    font-size: 42px;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+
+    span {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 30%;
+      margin-right: 20px;
+
+      &::after {
+        content: 'K57';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 30px;
+        color: #1c1c1c;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

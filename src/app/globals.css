@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    cursor: wait;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+@media only screen and (max-width: 1440px) {
+    body {
+        width: 100%;
+        max-width: 1440px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    body {
+        width: 100%;
+        max-width: 1024px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        max-width: 768px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 500px) {
+    body {
+        width: 100%;
+        max-width: 500px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 384px) {
+    body {
+        width: 100%;
+        max-width: 384px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,115 @@
+.descriptions {
+  position: absolute;
+  top: 3px;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+  .description {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    clip-path: inset(50% 0 50%);
+    transition: clip-path 0.4s;
+
+    p {
+      &:nth-of-type(1) {
+        color: #010101;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 8vw;
+        line-height: 7.5vw;
+        margin: 0px;
+        position: relative;
+        z-index: 1;
+      }
+      &:nth-of-type(2) {
+        width: 40%;
+        font-size: 1vw;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .descriptions {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+
+    .description {
+      p {
+        &:nth-of-type(1) {
+          font-size: 8vw;
+        }
+        &:nth-of-type(2) {
+          font-size: 1.8vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024) {
+  .descriptions {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+
+    .description {
+      inset: 50% 0 50%;
+      p {
+        &:nth-of-type(1) {
+          font-size: 8vw;
+        }
+        &:nth-of-type(2) {
+          font-size: 1.8vw;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .descriptions {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+
+    .description {
+      p {
+        &:nth-of-type(1) {
+          font-size: 6vw;
+        }
+        &:nth-of-type(2) {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .descriptions {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+
+    .description {
+      p {
+        &:nth-of-type(1) {
+          font-size: 6vw;
+        }
+        &:nth-of-type(2) {
+          font-size: 1.8vw;
+        }
+      }
+    }
+  }
+}
+
